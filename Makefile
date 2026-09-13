@@ -30,6 +30,6 @@ clean: down
 	@docker system prune -af
 
 fclean: clean
-	@rm -rf $(DATA_DIR)
+	@sudo rm -rf $(DATA_DIR)
 
 re: fclean all

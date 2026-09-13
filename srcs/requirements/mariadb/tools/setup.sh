@@ -26,3 +26,4 @@ chown -R mysql:mysql /var/lib/mysql/
 touch /var/lib/mysql/.init_db_done
 
 exec mysqld_safe
+

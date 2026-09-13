@@ -1,6 +1,7 @@
 FROM debian:bookworm
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends\
+    default-mysql-client\
     php-mysql\
     php-cgi\
     php-fpm\
@@ -40,3 +41,4 @@ RUN chmod +x /usr/local/bin/setup.sh
 EXPOSE 9000
 
 ENTRYPOINT ["setup.sh"]
+
