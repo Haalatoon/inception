@@ -5,9 +5,6 @@ DB_PASS=$(cat /run/secrets/db_password)
 ADMIN_PASS=$(cat /run/secrets/wp_admin_password)
 USER_PASS=$(cat /run/secrets/wp_user_password)
 
-#while ! mysqladmin ping -h"$WP_DB_HOST" --silent 2>/dev/null; do
-#	sleep 2
-#done
 until mysqladmin ping -h"$WP_DB_HOST" -u"$WP_DB_USER" -p"$DB_PASS" --silent 2>/dev/null; do
 	sleep 2
 done
